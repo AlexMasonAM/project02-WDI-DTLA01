@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @property.address %>
+</p>
+
+<p>
+  <strong>List price:</strong>
+  <%= @property.list_price %>
+</p>
+
+<p>
+  <strong>Sale price:</strong>
+  <%= @property.sale_price %>
+</p>
+
+<p>
+  <strong>Fix costs:</strong>
+  <%= @property.fix_costs %>
+</p>
+
+<p>
+  <strong>Time held:</strong>
+  <%= @property.time_held %>
+</p>
+
+<%= link_to 'Edit', edit_property_path(@property) %> |
+<%= link_to 'Back', properties_path %>
