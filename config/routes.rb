@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   
   root 'application#home'
+
+  get '/calculate' => 'properties#calculate', as: :calculate
+  
   resources :properties
 
 

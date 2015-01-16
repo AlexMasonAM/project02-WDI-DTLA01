@@ -21,6 +21,9 @@ class PropertiesController < ApplicationController
   def edit
   end
 
+  def calculate
+    @property = Property.new
+  end
   # POST /properties
   # POST /properties.json
   def create
