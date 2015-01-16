@@ -1,37 +1,39 @@
-<%= form_for(@property) do |f| %>
-  <% if @property.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@property.errors.count, "error") %> prohibited this property from being saved:</h2>
+<div class="text-center">
+  <%= form_for(@property) do |f| %>
+    <% if @property.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@property.errors.count, "error") %> prohibited this property from being saved:</h2>
 
-      <ul>
-      <% @property.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% @property.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :address %><br>
+      <%= f.text_field :address %>
+    </div>
+    <div class="field">
+      <%= f.label :list_price %><br>
+      <%= f.number_field :list_price %>
+    </div>
+    <div class="field">
+      <%= f.label :sale_price %><br>
+      <%= f.number_field :sale_price %>
+    </div>
+    <div class="field">
+      <%= f.label :fix_costs %><br>
+      <%= f.number_field :fix_costs %>
+    </div>
+    <div class="field">
+      <%= f.label :time_held %><br>
+      <%= f.number_field :time_held %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_field :address %>
-  </div>
-  <div class="field">
-    <%= f.label :list_price %><br>
-    <%= f.number_field :list_price %>
-  </div>
-  <div class="field">
-    <%= f.label :sale_price %><br>
-    <%= f.number_field :sale_price %>
-  </div>
-  <div class="field">
-    <%= f.label :fix_costs %><br>
-    <%= f.number_field :fix_costs %>
-  </div>
-  <div class="field">
-    <%= f.label :time_held %><br>
-    <%= f.number_field :time_held %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>

@@ -1,5 +1,29 @@
-<h1>New Property</h1>
+<div class="container">
+  <h1>New Property</h1>
+  <h4>enter information to about a property to calculate its flip potential</h4>
+  <!-- left grid -->
+  <div class="row">
+    <div class="col-lg-2">
+    </div>
+  </div>
+  <!-- center grid for Property inputs-->
 
-<%= render 'form' %>
+    <div class="col-lg-4">
+      <div class="property-card">
+        <div class="text-center">
+          <h3>New Property</h3>
+        </div>
+          <%= render 'form' %>
+      </div>
+    </div>
+  
+  <!-- right grid for Property output -->
+  
+    <div class="col-lg-6">
+      <div class="house-start">
+      </div> 
+    </div>
+  </div>
+</div>
 
 <%= link_to 'Back', properties_path %>

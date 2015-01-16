@@ -1,35 +1,25 @@
-<p id="notice"><%= notice %></p>
-
-<h1 class="jumbtron">Listing Properties</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Address</th>
-      <th>List price</th>
-      <th>Sale price</th>
-      <th>Fix costs</th>
-      <th>Time held</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @properties.each do |property| %>
-      <tr>
-        <td><%= property.address %></td>
-        <td><%= property.list_price %></td>
-        <td><%= property.sale_price %></td>
-        <td><%= property.fix_costs %></td>
-        <td><%= property.time_held %></td>
-        <td><%= link_to 'Show', property %></td>
-        <td><%= link_to 'Edit', edit_property_path(property) %></td>
-        <td><%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Property', new_property_path %>
+<div class="container">
+  <h1 class="jumbtron">Saved Properties</h1>
+  <button class="btn btn-primary">sort by newest</button>   <button class="btn btn-primary">sort by profit</button>
+  <button class="btn btn-primary">sort by % profit</button>
+  <div class="row">    
+    <div class="property-card">
+      <div class="text-center">
+        <h3>Address of Saved Property</h3>
+        <p>largest % profit of saved result by user</p>
+      </div>
+    </div>
+    <div class="property-card">
+      <div class="text-center">
+        <h3>Address of Saved Property</h3>
+        <p>2nd largest % profit of saved result by user</p>
+      </div>
+    </div>
+    <div class="property-card">
+      <div class="text-center">
+        <h3>Address of Saved Property</h3>
+        <p>...nth largest % profit of saved result by user</p>
+      </div>
+    </div>
+  </div>
+</div>

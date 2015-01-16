@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>FLIP HOUSE</title>
+  <title>FLIP a HOUSE</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="squarish"></div>
+  <div class="container">  
+      <div class='pull-right'>
+        <%= link_to "Sign in", class: "pull-right" %> |
+        <%= link_to "Sign up", class: "pull-right" %> 
+          <!-- div container wraps all text -->
+      </div>
+      <div class="pull-left">
+        <%= link_to 'Flip a House', root_path %> |
+        <%= link_to "Saved Flips", properties_path %>
+      </div> 
+  </div>
 <%= yield %>
 
 </body>
