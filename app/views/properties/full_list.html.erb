@@ -8,7 +8,7 @@
   <table>
     <thead>
       <tr>
-        <th>Address</th>
+        <!-- <th>Address</th> -->
         <th>List price</th>
         <th>Sale price</th>
         <th>Fix costs</th>
@@ -20,14 +20,15 @@
     <tbody>
       <% @properties.each do |property| %>
         <tr>
-          <td><%= property.address %></td>
+          <!-- <td><%= property.address %></td> -->
           <td><%= property.list_price %></td>
           <td><%= property.sale_price %></td>
           <td><%= property.fix_costs %></td>
           <td><%= property.time_held %></td>
+          <!-- remove editablitly from this session and only add 'your Flips' only
           <td><%= link_to 'Show', property %></td>
           <td><%= link_to 'Edit', edit_property_path(property) %></td>
-          <td><%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
         </tr>
       <% end %>
     </tbody>
