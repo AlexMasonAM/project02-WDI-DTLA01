@@ -27,3 +27,32 @@
 
 <%= link_to 'Edit', edit_property_path(@property) %> |
 <%= link_to 'Back', properties_path %>
+________________________________________________________________________________________________
+<div class="container">
+  <h1><%= current_user.username.capitalize %>'s Property</h1>
+  <h4>this property has a <%= :profit_margin %>%profit potential</h4>
+  <!-- left grid -->
+  <div class="row">
+    <div class="col-lg-2">
+    </div>
+  </div>
+  <!-- center grid for Property inputs-->
+
+    <div class="col-lg-4">
+      <div class="property-card">
+        <div class="text-center">
+          <h3>New Property</h3>
+        </div>
+          <%= render 'form' %>
+      </div>
+    </div>
+  
+  <!-- right grid for Property output -->
+  
+    <div class="col-lg-6">
+      <div class="house-start">
+      </div> 
+    </div>
+  </div>
+  <%= link_to 'Flip List', properties_path %>
+</div>
