@@ -24,6 +24,7 @@ class PropertiesController < ApplicationController
   def calculate
     @property = Property.new
   end
+
   # POST /properties
   # POST /properties.json
   def create

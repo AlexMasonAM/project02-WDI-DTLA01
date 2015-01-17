@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="property-card">
+    <div class="text-center">
+      <h1>Join the community!</h1>
+
+      <%= form_for @user do |f| %>
+        <p>First Name</p>
+        <%= f.text_field :first_name %>
+        <p>Last Name</p>
+        <%= f.text_field :last_name %>
+        <p>Username</p>
+        <%= f.text_field :username %>
+        <p>Password</p>
+        <%= f.password_field :password %>
+        <p>Confirm password</p>
+        <%= f.password_field :password_confirmation %>
+        <br><br><br><br>
+        <%= f.submit 'Join!' %>
+      <% end %>
+    </div>
+  </div>
+</div>
