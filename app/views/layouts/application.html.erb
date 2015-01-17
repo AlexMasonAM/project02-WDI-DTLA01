@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>FLIP a HOUSE</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <div class="container">  
-      <div class="pull-left">
-        <%= link_to 'Flip a House', root_path %> |
-        <%= link_to "Flip List", properties_path %>
-      </div> 
+  <head>
+    <title>FLIP a HOUSE</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
 
-      <div class='pull-right'>
-        <%= link_to "Sign in", '/login' %> |
-        <%= link_to "Sign up", '/signup' %> 
-          <!-- div container wraps all text -->
-      </div>
-  </div>
-<%= yield %>
+  <body>
+    <div class="container">  
+        <% if current_user %>
+          <div class="pull-left">
+            <%= link_to 'Flip a House', root_path %> |
+            <%= link_to "Your Flips", properties_path %> |
+            <%= link_to "Flip again", calculate_path %>
+          </div> 
+          <div class="pull-right">
+              Logged in: <%= current_user.username %> | <%= link_to 'Logout', logout_path %> 
+
+          </div>
+        <% else %>
+          <div class="pull-left">
+            <%= link_to 'Flip a House', root_path %> |
+            <%= link_to "Flip List", properties_path %>
+          </div>
+          <div class="pull-right">         
+              <%= link_to 'Login', login_path %> | <%= link_to 'Sign up', signup_path %> 
+          </div>
+        <% end %>
+            <!-- div container wraps all text -->
+    </div>
+  <%= yield %>
 
 
-</body>
+  </body>
 </html>
+
+
