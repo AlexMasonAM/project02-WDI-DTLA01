@@ -7,4 +7,6 @@ class Property
   field :time_held, type: Integer
 
   has_one :user
+
+  validates :list_price, :sale_price, presence: true
 end
