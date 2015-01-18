@@ -1,58 +1,63 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Address:</strong>
-  <%= @property.address %>
-</p>
-
-<p>
-  <strong>List price:</strong>
-  <%= @property.list_price %>
-</p>
-
-<p>
-  <strong>Sale price:</strong>
-  <%= @property.sale_price %>
-</p>
-
-<p>
-  <strong>Fix costs:</strong>
-  <%= @property.fix_costs %>
-</p>
-
-<p>
-  <strong>Time held:</strong>
-  <%= @property.time_held %>
-</p>
-
-<%= link_to 'Edit', edit_property_path(@property) %> |
-<%= link_to 'Back', properties_path %>
-________________________________________________________________________________________________
-<div class="container">
-  <h1><%= current_user.username.capitalize %>'s Property</h1>
-  <h4>this property has a <%= :profit_margin %>%profit potential</h4>
-  <!-- left grid -->
-  <div class="row">
-    <div class="col-lg-2">
-    </div>
-  </div>
-  <!-- center grid for Property inputs-->
-
-    <div class="col-lg-4">
-      <div class="property-card">
-        <div class="text-center">
-          <h3>New Property</h3>
-        </div>
-          <%= render 'form' %>
+<% if current_user %>
+  <div class="container">
+    <h1><%= current_user.username.capitalize %>'s Property Details</h1>
+    <h4>this property has a <%= :profit_margin %>% profitability</h4>
+    <!-- left grid -->
+    <div class="row">
+      <div class="col-lg-2">
       </div>
     </div>
-  
-  <!-- right grid for Property output -->
-  
-    <div class="col-lg-6">
-      <div class="house-start">
-      </div> 
-    </div>
-  </div>
-  <%= link_to 'Flip List', properties_path %>
-</div>
+    <!-- center grid for Property inputs-->
+
+      <div class="col-lg-4">
+        <div class="property-card">
+          <div class="text-center">
+            <p>
+              <div class="house-saved"></div>
+            </p>
+            <h3><%= @property.address %></h3><br>
+          </div>
+              <p>
+                <strong>Profit:</strong>
+                  $ @property.profit
+              </p>
+              <p>
+                <strong>% Profit:</strong>
+                <%= @property.percent_profit %>
+              </p>            
+              <p>
+                <strong>List price:</strong>
+                <%= @property.list_price %>
+              </p>
+              <p>
+                <strong>Sale price:</strong>
+                <%= @property.sale_price %>
+              </p>
+              <p>
+                <strong>Fix costs:</strong>
+                <%= @property.fix_costs %>
+              </p> 
+              <p>
+                <strong>Time held:</strong>
+                <%= @property.time_held %>
+              </p> 
+        </div>
+
+      </div>
+    
+    <!-- right grid for Property output -->
+    <!-- footer for Property Show output -->
+    </div> 
+      <div class="row">
+        <div class="pull-left">
+         <%= link_to 'Flip List', properties_path %>  |
+          <%= link_to 'Edit', edit_property_path(@property) %>
+        </div>
+      </div>
+  <br>
+<% else %>
+  <h1>you must be logged in to view Property Details</h1>
+  <%= link_to 'Login', login_path %>
+  <%= link_to 'Signup', '/signup' %>
+<% end %>
+

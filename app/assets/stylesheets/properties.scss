@@ -20,6 +20,17 @@
   margin: 50px;
 }
 
+.house-saved {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  border-radius: 2px;
+  // float: left;
+  position: relative;
+  display: inline-block;
+  margin: auto;
+}
+
 .result-window {
   width: 800px;
   height: 300px;

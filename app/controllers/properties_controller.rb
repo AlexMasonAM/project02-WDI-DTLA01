@@ -14,6 +14,7 @@ class PropertiesController < ApplicationController
   # GET /properties/1
   # GET /properties/1.json
   def show
+    # before_action :authorize
   end
 
   # GET /properties/new
@@ -44,6 +45,12 @@ class PropertiesController < ApplicationController
       end
     end
   end
+
+  def current_property
+      @current_property ||= Property.find(session[:user_id]) if session[:user_id]
+  end
+  helper_method :current_property #needed if accessed by other views and not just controllers
+
 
   # PATCH/PUT /properties/1
   # PATCH/PUT /properties/1.json
