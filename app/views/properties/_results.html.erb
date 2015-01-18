@@ -1,0 +1,24 @@
+<div class="text-center">
+  <%= form_for(@property) do |f| %>
+    <% if @property.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@property.errors.count, "error") %> prohibited this property from being saved:</h2>
+
+        <ul>
+        <% @property.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :profit_margin %><br>
+      <%= f.text_field :profit_margin %>
+    </div>
+    <div class="field">
+      <%= f.label :percent_profit %><br>
+      <%= f.number_field :percent_profit %>
+    </div>
+  <% end %>
+</div>
