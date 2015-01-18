@@ -22,12 +22,15 @@
       
         <div class="col-lg-7">
           <div class="house-start">
+            <%= image_tag 'house-01.png', size: '300x300' %><br>
+            <%= button_tag "Calculate Flip"%>
+
           </div> 
         </div>
     </div>
 
-    <div class="row">
-      <div class="result-window"
+    <div class="row" "pull-right">
+      <div class="result-window">
           <h3>results</h3>
           <%= render 'results' %>
       </div>
