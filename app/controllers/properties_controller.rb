@@ -30,6 +30,12 @@ class PropertiesController < ApplicationController
     @property = Property.new
   end
 
+  def calculate_profit
+    @property.profit_margin = @property.sale_price - @property.list_price
+    @property.percent_profit = @property.profit_margin / @property.fix_costs
+  end
+  helper_method :calculate_profit #needed if accessed by other views and not just controllers
+
   # POST /properties
   # POST /properties.json
   def create

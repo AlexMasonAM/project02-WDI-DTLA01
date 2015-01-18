@@ -12,13 +12,11 @@
       </div>
     <% end %>
 
-    <div class="field">
-      <%= f.label :profit_margin %><br>
-      <%= f.text_field :profit_margin %>
-    </div>
-    <div class="field">
-      <%= f.label :percent_profit %><br>
-      <%= f.number_field :percent_profit %>
+    <div class="result-text">
+      <h3>profit:</h3>
+      $<%= @property.profit_margin %>
+      <h3>percent profit:</h3>
+      <%= @property.percent_profit%>%
     </div>
   <% end %>
 </div>
