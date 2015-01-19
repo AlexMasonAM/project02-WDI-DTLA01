@@ -1,8 +1,11 @@
 <div class="container">
   <div class="row">
     <div class="jumbotron">
-      <h1>FlipHouse/<span>FlopHouse</span></h1>
-      <h3>a visual calculator to help everyone Flip a House </h3> 
+      <%= image_tag 'house-icon-06-lg.png', size: '300x300'%><br>
+      <h1><%= link_to 'FlipHouse/', calculate_path %></h1><br>
+      <!-- <h1><span><%= link_to 'FlopHouse', calculate_path %></span></h1>  -->
+    </div>
+      <h3>a calculator thats shows the value of your House </h3> 
       <%= link_to Property.all.sample, '/full_list'%><br>
       <%= link_to "make money!", calculate_path, class: "btn btn-success" %>
     </div>

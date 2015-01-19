@@ -18,4 +18,10 @@ class Property
   def date_published
     created_at.localtime.strftime("%A, %B %-d, %Y at %l:%M %p")
   end  
+
+  def calculate_profit
+    @property.profit_margin = @property.sale_price - @property.list_price
+    @property.percent_profit = @property.profit_margin / @property.fix_costs
+  end
+  
 end
