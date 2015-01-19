@@ -1,11 +1,19 @@
 <div class="container">
-  <div class="row">
-    <div class="jumbotron">
-      <%= image_tag 'house-icon-06-lg.png', size: '300x300'%><br>
-      <h1><%= link_to 'FlipHouse/', calculate_path %></h1><br>
+  <div class="row"> 
+    <div class="jumbotron" class="center-text">
+      <div><h1>HOUSEcalc/<small>showing the value of your House </small><h1></div>
+      <div class="jumbo-inline">
+        <%= image_tag 'house-icon-06-lg.png', size: '300x300'%><br>
+        <h1><%= link_to 'MortHouse/', calculate_path %></h1><br>
+      </div>
+      <div "jumbo-inline">
+        <%= image_tag 'house-icon-06-flip.png', size: '300x300'%><br>
+        <h1><%= link_to 'FlipHouse/', calculate_path %></h1><br>
+      </div>
+
       <!-- <h1><span><%= link_to 'FlopHouse', calculate_path %></span></h1>  -->
     </div>
-      <h3>a calculator thats shows the value of your House </h3> 
+      <h3>a calculator that shows the value of your House </h3> 
       <%= link_to Property.all.sample, '/full_list'%><br>
       <%= link_to "make money!", calculate_path, class: "btn btn-success" %>
     </div>
