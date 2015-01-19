@@ -1,5 +1,6 @@
 class Property
   include Mongoid::Document
+  include Mongoid::Timestamps
   field :address, type: String
   field :list_price, type: Integer
   field :sale_price, type: Integer
@@ -13,4 +14,8 @@ class Property
   has_one :user
 
   validates :list_price, :sale_price, presence: true
+
+  def date_published
+    created_at.localtime.strftime("%A, %B %-d, %Y at %l:%M %p")
+  end  
 end
