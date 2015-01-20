@@ -1,5 +1,6 @@
 class PropertiesController < ApplicationController
   before_action :set_property, only: [:show, :edit, :update, :destroy]
+  
 
   # GET /properties
   # GET /properties.json
@@ -30,14 +31,16 @@ class PropertiesController < ApplicationController
     @property = Property.new
   end
 
-  def calculate_profit
-    @property.profit_margin = @property.sale_price - @property.list_price
-    @property.percent_profit = @property.profit_margin / @property.fix_costs
-  end
-  helper_method :calculate_profit #needed if accessed by other views and not just controllers
 
+  
+  # def calculate_profit_margin
+  #   self.percent_profit = self.profit_margin / self.fix_costs
+  # end
+  # helper_method :calculate_profit_percent #needed if accessed by other views and not just controllers
+ 
   # POST /properties
   # POST /properties.json
+
   def create
     @property = Property.new(property_params)
 
