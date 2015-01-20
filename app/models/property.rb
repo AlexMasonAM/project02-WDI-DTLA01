@@ -10,7 +10,7 @@ class Property
 
   # calculated fields
   field :profit_margin, type: Integer
-  field :percent_profit, type: Integer
+  field :profit_percent, type: Float
 
   # relationals
   belongs_to :user
@@ -27,7 +27,7 @@ class Property
   end
 
   def calculate_profit_percent
-    (1550/750)*100
+    self.profit_percent = (self.fix_costs * 100).to_i / self.profit_margin
   end
   # def calculate_profit_margin
   #   profit_margin = self.profit_margin
