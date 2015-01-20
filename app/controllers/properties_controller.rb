@@ -34,7 +34,7 @@ class PropertiesController < ApplicationController
 
   
   # def calculate_profit_margin
-  #   self.percent_profit = self.profit_margin / self.fix_costs
+  #   self.profit_percent = self.profit_margin / self.fix_costs
   # end
   # helper_method :calculate_profit_percent #needed if accessed by other views and not just controllers
  
@@ -93,6 +93,6 @@ class PropertiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def property_params
-      params.require(:property).permit(:address, :list_price, :sale_price, :fix_costs, :time_held)
+      params.require(:property).permit(:address, :list_price, :sale_price, :fix_costs, :time_held, :profit_margin, :profit_percent, :user_id)
     end
 end

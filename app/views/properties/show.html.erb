@@ -1,7 +1,7 @@
 <% if current_user %>
   <div class="container">
     <h1><%= current_user.username.capitalize %>'s Property Details</h1>
-    <h4>this property has a $<%= @property.profit_margin %> profit potential</h4>
+    <h4>this property has a $<%= @property.calculate_profit_margin %> profit potential</h4>
     <!-- left grid -->
     <div class="row">
       <div class="col-lg-2">
