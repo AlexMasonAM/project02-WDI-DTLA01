@@ -1,16 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>FlipHouse</title>
     <%= favicon_link_tag 'house-icon-06-lg.png' %>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
-    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700italic|Gudea:400,700|Ek+Mukta:400,600,800|Fredoka+One|Source+Code+Pro|Quattrocento+Sans:400,700|VT323|Comfortaa|Nova+Square|Roboto:400,100' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700italic|Gudea:400,700|Ek+Mukta:400,600,800|Fredoka+One|Source+Code+Pro|Quattrocento+Sans:400,700|VT323|Comfortaa|Nova+Square|Roboto:400,100' rel='stylesheet' type='text/css'>    
   </head>
 
   <body>
-    <div class="container">  
+  <body ng-app= "">
+    <div class="container">
+      {{ 5 * 3}}
         <% if current_user %>
           <div class="pull-left">
             <%= link_to 'Flip a House', root_path %> |
@@ -31,11 +37,7 @@
           </div>
         <% end %>
             <!-- div container wraps all text -->
-    </div>
-  <%= yield %>
-
-
+    <%= yield %>
+    <%#= javascript_include_tag "application" %>
   </body>
 </html>
-
-

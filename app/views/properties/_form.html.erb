@@ -18,11 +18,11 @@
     </div>
     <div class="field">
       <%= f.label :list_price %><br>
-      <%= f.number_field :list_price %>
+      <%= f.number_field :list_price, { "ng-model" => "listPrice"} %>
     </div>
     <div class="field">
       <%= f.label :sale_price %><br>
-      <%= f.number_field :sale_price %>
+      <%= f.number_field :sale_price, { "ng-model" => "salePrice" } %>
     </div>
     <div class="field">
       <%= f.label :fix_costs %><br>
@@ -32,6 +32,8 @@
       <%= f.label :time_held %><br>
       <%= f.number_field :time_held %>
     </div>
+            {{ listPrice / salePrice }}
+
     <div class="actions">
       <p>calculate</p>
     </div>

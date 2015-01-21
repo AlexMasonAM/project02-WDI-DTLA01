@@ -43,6 +43,8 @@ class PropertiesController < ApplicationController
 
   def create
     @property = Property.new(property_params)
+    @property.profit_margin = @property.calculate_profit_margin
+    @property.profit_percent = @property.calculate_profit_percent
 
     respond_to do |format|
       if @property.save

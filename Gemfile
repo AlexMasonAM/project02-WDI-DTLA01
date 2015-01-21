@@ -7,6 +7,8 @@ gem 'rails', '4.2.0'
 gem 'sass-rails', '~> 5.0'
 # Use bootstrap
 gem 'bootstrap-sass', '~> 3.3.1'
+# use foundation for rails
+gem 'foundation-rails'
 # Use autoprefixer with rails
 gem 'autoprefixer-rails'
 # Use Uglifier as compressor for JavaScript assets
