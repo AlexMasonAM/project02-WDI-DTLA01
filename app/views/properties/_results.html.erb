@@ -15,7 +15,9 @@
     <div class="result-text">
       <h3>profit:</h3>
       $<%= @property.profit_margin %>
+      {{ salePrice - listPrice - fixCosts }}
       <h3>percent profit:</h3>
+      {{ (salePrice - listPrice - fixCosts) / fixCosts * 100 }}
       <%= @property.profit_percent%>%
     </div>
   <% end %>
