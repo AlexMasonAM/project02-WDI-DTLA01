@@ -47,5 +47,32 @@
 
 .result_text {
   display: inline-block;
+}
 
+.house-results-input {
+  display: inline-block;
+  float: left;
+  position: relative;
+  
+  margin-top: 100px;
+  margin-left: 53px;;
+}
+
+
+svg.house-results-graphic {
+  display: inline-block;
+  float: left;
+  position: relative;
+  border: black solid 2px;
+}
+
+.result-card {
+  width: 500px;
+  height: 400px;
+  border: 2px solid black;
+  border-radius: 25px; 
+  margin: 10px;
+  float: left;
+  position: relative;
+  display: inline-block;
 }

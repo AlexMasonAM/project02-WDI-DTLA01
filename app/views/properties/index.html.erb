@@ -11,27 +11,9 @@
             <h2> <%= property.address %> </h2>
             <h2> <%= property.fix_costs %> </h2>
             <h3> <%= property.list_price/property.sale_price %> </h3>
+            <%= link_to "House Details!", property %>
         </div>
       </div>
     <% end %>  
-    <div class="property-card">
-      <div class="text-center">
-        <h3>Address of Saved Property</h3>
-        <p>largest % profit of saved result by user</p>
-      </div>
-    </div>
-    <div class="property-card">
-      <div class="text-center">
-        <h3>Address of Saved Property</h3>
-        <p>2nd largest % profit of saved result by user</p>
-      </div>
-    </div>
-    <div class="property-card">
-      <div class="text-center">
-        <h3>Address of Saved Property</h3>
-        <p>...nth largest % profit of saved result by user</p>
-      </div>
-    </div>
-  </div>
   <%= link_to "Flip a Gain!", calculate_path %>
 </div>

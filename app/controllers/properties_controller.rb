@@ -5,11 +5,11 @@ class PropertiesController < ApplicationController
   # GET /properties
   # GET /properties.json
   def full_list
-    @properties = Property.all
+    @properties = Property.all.order(created_at: :desc)
   end
 
   def index 
-    @properties = Property.all
+    @properties = Property.all.order(created_at: :desc)
   end
 
   # GET /properties/1

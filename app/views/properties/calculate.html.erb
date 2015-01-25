@@ -1,11 +1,15 @@
 <div class="container">
     <div class="row">
-      <h1>New Property</h1>
-      <h4>enter information to about a property to calculate its flip potential</h4>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-11">  
+          <h1>New Property</h1>
+          <h4>enter information to about a property to calculate its flip potential</h4>
+        </div>
     </div>
     <!-- left grid -->
     <div class="row">
       <div class="col-lg-1">
+        <!-- space making div -->
       </div>
     <!-- center grid for Property inputs-->
 
@@ -20,25 +24,44 @@
       
       <!-- right grid for Property output -->
       
-        <div class="col-lg-8">
-          <div class="house-start">
+        <div class="col-lg-2">
+          <div class="house-results-input" "text-center">
             <%= render 'results' %>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="result-card">  
             <%= render 'd3result' %>
-            <%= image_tag 'house-icon-08-lg.png', size: '300x300' %><br>
-            <%= button_tag "Calculate Flip"%>
+            <div class="text-center"> 
+              <%= image_tag 'house-icon-08-lg.png', size: '300x300' %>
+            </div> 
+            <%#= button_tag "Calculate Flip"%>
           </div> 
         </div>
+        <div class="col-lg-1">
+          <!-- space making div -->
+        </div>        
     </div>
 
+<!--     results window: full width, under form
     <div class="row" "center-text">
       <div class="result-window">
           <h3>results</h3>
           <%#= render 'results' %>
       </div>
-    </div>
+    </div> -->
+
     <div class="row">
-      <div class="btn btn-success">
+      <div class="col-lg-5">
+          <!-- space making div -->
+      </div>
+      <div class="col-lg-2">
+        <div class="btn btn-success">
           <p>save result</p> 
+      </div>
+      </div>
+      <div class="col-lg-5">
+          <!-- space making div -->
       </div>
     </div>
 
