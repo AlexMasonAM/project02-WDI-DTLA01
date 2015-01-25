@@ -5,7 +5,7 @@ class PropertiesController < ApplicationController
   # GET /properties
   # GET /properties.json
   def full_list
-    @properties = Property.all.order(created_at: :desc)
+    @properties = Property.all.order(sale_price: :desc)
   end
 
   def index 
