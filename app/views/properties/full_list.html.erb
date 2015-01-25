@@ -33,10 +33,12 @@
           <td><%= property.calculate_profit_percent %></td> -->
           <td><%= link_to 'Show', property %></td>
 
-          <!-- remove editablitly from this session and only add 'your Flips' only
-          
+          <!-- remove editablitly from this session and only add 'your Flips' only -->
+          <% if current_user %>
           <td><%= link_to 'Edit', edit_property_path(property) %></td>
-          <td><%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+          <td><%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% else %>
+          <% end %> 
         </tr>
       <% end %>
     </tbody>

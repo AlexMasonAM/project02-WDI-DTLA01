@@ -1,8 +1,25 @@
-<svg width="75" height="75">
-  <line x1="25" y1="0" x2="50" y2="20"  class="house"/>
-  <line x1="50" y1="20" x2="50" y2="50"  class="house"/>
-  <line x1="50" y1="50" x2="0" y2="50"  class="house"/>
-  <line x1="0" y1="50" x2="0" y2="20"  class="house"/>
-  <line x1="0" y1="20" x2="25" y2="0"  class="house"/>
-  <!-- <rect x="0" y="30" width="30" height="20" fill="purple"/> -->
-</svg> 
+<div class="d3-input">
+  <p>
+    <label for="nValue" 
+           style="display: inline-block; width: 240px; text-align: right">
+           Angle/FlopHouse = <span id="nValue-value"></span>
+    </label>
+    <input type="number" min="-720" max="720" step="5" value="0" id="nValue" >
+  </p>
+  <p>
+    <label for="nColor" 
+           style="display: inline-block; width: 240px; text-align: right">
+           Color/Profit Margin = <span id="nColor-value"></span>
+    </label>
+    <input type="number" min="-1000000" max="1000000" step="1000" value="0" id="nColor" >
+  </p>
+  <p>
+    <label for="nRatio" 
+           style="display: inline-block; width: 240px; text-align: right">
+           Ratio/Profit % = <span id="nRatio-value"></span>
+    </label>
+    <input type="number" min="-10" max="10" step=".10" value="0" id="nRatio" >
+  </p>
+</div>
+
+

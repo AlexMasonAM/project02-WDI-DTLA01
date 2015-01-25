@@ -8,7 +8,7 @@ class PropertiesController < ApplicationController
     @properties = Property.all
   end
 
-  def index
+  def index 
     @properties = Property.all
   end
 
@@ -25,6 +25,7 @@ class PropertiesController < ApplicationController
 
   # GET /properties/1/edit
   def edit
+    @property = Property.find(params[:id])
   end
 
   def calculate
@@ -66,14 +67,12 @@ class PropertiesController < ApplicationController
   # PATCH/PUT /properties/1
   # PATCH/PUT /properties/1.json
   def update
-    respond_to do |format|
-      if @property.update(property_params)
-        format.html { redirect_to @property, notice: 'Property was successfully updated.' }
-        format.json { render :show, status: :ok, location: @property }
-      else
-        format.html { render :edit }
-        format.json { render json: @property.errors, status: :unprocessable_entity }
-      end
+    @property = Property.find(params[:id])
+
+    if @property.update(property_params)
+      redirect_to properties_path
+    else
+      render :edit
     end
   end
 

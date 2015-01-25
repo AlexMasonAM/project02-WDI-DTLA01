@@ -27,9 +27,8 @@ class Property
   end
 
   def calculate_profit_percent
-     (self.fix_costs * 100).to_i / self.profit_margin
+     (self.fix_costs * 100).to_i / (self.sale_price - self.fix_costs-self.list_price)
   end
- 
   #NOT SURE WHAT THIS CODE IS DOING 
   # def calculate_profit_margin
   #   profit_margin = self.profit_margin

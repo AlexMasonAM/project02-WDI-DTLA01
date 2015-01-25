@@ -9,7 +9,7 @@
       </div>
     <!-- center grid for Property inputs-->
 
-      <div class="col-lg-4">
+      <div class="col-lg-3">
         <div class="property-card">
           <div class="text-center">
             <h3>New Property</h3>
@@ -20,9 +20,9 @@
       
       <!-- right grid for Property output -->
       
-        <div class="col-lg-7">
+        <div class="col-lg-8">
           <div class="house-start">
-            <%= render 'housesvg' %>
+            <%= render 'results' %>
             <%= render 'd3result' %>
             <%= image_tag 'house-icon-08-lg.png', size: '300x300' %><br>
             <%= button_tag "Calculate Flip"%>
@@ -33,7 +33,7 @@
     <div class="row" "center-text">
       <div class="result-window">
           <h3>results</h3>
-          <%= render 'results' %>
+          <%#= render 'results' %>
       </div>
     </div>
     <div class="row">
@@ -41,6 +41,7 @@
           <p>save result</p> 
       </div>
     </div>
+
     <!-- part of future bottom navigation bar
     <div class="pull-left">
       <%= link_to 'Flip List', properties_path %>

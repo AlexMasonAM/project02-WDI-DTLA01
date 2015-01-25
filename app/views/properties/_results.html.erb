@@ -14,11 +14,21 @@
 
     <div class="result-text">
       <h3>profit:</h3>
-      $<%= @property.profit_margin %>
-      {{ salePrice - listPrice - fixCosts }}
+      <label for="nColor">
+        $<%= @property.profit_margin %>
+        {{ salePrice - listPrice - fixCosts }}
+        <span id="nColor-value"></span>  
+      </label>
+      <input type="number" min="-1000000" max="1000000" step="1" value="{{ salePrice - listPrice - fixCosts }}" id="nColor" >
       <h3>percent profit:</h3>
-      {{ (salePrice - listPrice - fixCosts) / fixCosts * 100 }}
-      <%= @property.profit_percent%>%
+      <label for="nRatio">
+        {{ (salePrice - listPrice - fixCosts) / fixCosts * 100 }}
+        <%= @property.profit_percent%>%
+      <span id="nRatio-value"></span>  
+      </label>
+      <input type="number" min="-10" max="10" step=".10" value="0" id="nRatio" >
     </div>
   <% end %>
 </div>
+      
+<%#= render 'd3result' %>
