@@ -3,6 +3,16 @@
   <button class="btn btn-primary">sort by newest</button>   <button class="btn btn-primary">sort by profit</button>
   <button class="btn btn-primary">sort by % profit</button>
   <div class="row">    
+    <% @properties.each do |property| %>
+      <div class="property-card">
+        <div class="text-center">
+            <%#= image_tag property.image_url, size:'800x800' %>
+            <%= image_tag 'house-icon-08-lg.png', size: '300x300' %>
+            <h2> <%= property.address %> </h2>
+            <h3> <%= property.list_price/property.sale_price %> </h3>
+        </div>
+      </div>
+    <% end %>  
     <div class="property-card">
       <div class="text-center">
         <h3>Address of Saved Property</h3>
