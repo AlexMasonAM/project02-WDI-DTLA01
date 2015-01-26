@@ -1,13 +1,13 @@
 <div class="container">
   <h1 class="jumbtron">Saved Properties</h1>
-  <button class="btn btn-primary">sort by newest</button>   <button class="btn btn-primary">sort by profit</button>
-  <button class="btn btn-primary">sort by % profit</button>
+  <button class="btn btn-success">sort by newest</button>   <button class="btn btn-success">sort by profit</button>
+  <button class="btn btn-success">sort by % profit</button>
   <div class="row">    
     <% @properties.each do |property| %>
       <div class="property-card">
         <div class="text-center">
             <%#= image_tag property.image_url, size:'800x800' %>
-            <%= image_tag 'house-icon-08-lg.png', size: '300x300' %>
+            <%= image_tag 'fliphouse-green.png', size: '150x150' %>
             <h2> <%= property.address %> </h2>
             <h2> <%= property.fix_costs %> </h2>
             <h3> <%= property.list_price/property.sale_price %> </h3>
@@ -15,5 +15,5 @@
         </div>
       </div>
     <% end %>  
-  <%= link_to "Flip a Gain!", calculate_path %>
+  <%#= link_to "Flip a Gain!", calculate_path %>
 </div>

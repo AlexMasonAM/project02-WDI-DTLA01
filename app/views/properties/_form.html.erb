@@ -22,22 +22,16 @@
     </div>
     <div class="field">
       <%= f.label :sale_price %><br>
-      <%= f.number_field :sale_price, { "ng-model" => "salePrice" } %>
+      <%= f.number_field :sale_price,{ "ng-model" => "salePrice" } %>
     </div>
     <div class="field">
         <%= f.label :fix_costs %><br>
         <%= f.number_field :fix_costs, { "ng-model" => "fixCosts" } %>
     </div>
     <div class="field">
-      <%= f.label :time_held %><br>
+      <%= f.label "Months held" %><br>
       <%= f.number_field :time_held %>
     </div>
-
-    <div class="actions">
-      <p>calculate</p>
-    </div>
-    <br>
-    <br>
     <div class="actions">
       <%= f.submit "Calculate Flip"%>
     </div> 

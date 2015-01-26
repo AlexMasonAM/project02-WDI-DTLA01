@@ -13,48 +13,54 @@
         <div class="property-card">
           <div class="text-center">
             <p>
-              <div class="house-saved"></div>
+              <div class="house-saved">
+                <%= image_tag 'fliphouse-green.png', size: '150x150'%>
+              </div>
             </p>
             <h3><%= @property.address %></h3>
             <p>zillow link</p><br>
           </div>
-              <p>
+          <div class="property-results">
+              <h5>
                 <strong>Profit:</strong>
                   $<%= @property.profit_margin %>
-              </p>
-              <p>
+              </h5>
+              <h5>
                 <strong>% Profit:</strong>
                 <%= @property.profit_percent %>%
-              </p>            
-              <p>
+              </h5>            
+              <h5>
                 <strong>List price:</strong>
                 <%= @property.list_price %>
-              </p>
-              <p>
+              </h5>
+              <h5>
                 <strong>Sale price:</strong>
                 <%= @property.sale_price %>
-              </p>
-              <p>
+              </h5>
+              <h5>
                 <strong>Fix costs:</strong>
                 <%= @property.fix_costs %>
-              </p> 
-              <p>
-                <strong>Time held:</strong>
+              </h5> 
+              <h5>
+                <strong>Months held:</strong>
                 <%= @property.time_held %>
-              </p>
-              <small><%= @property.date_published %></small> 
+              </h5>
+              <small><%= @property.date_published %></small>
+          </div>   
         </div>
 
       </div>
     
     <!-- right grid for Property output -->
     <!-- footer for Property Show output -->
-    </div> 
+    </div><br> 
       <div class="row">
-        <div class="pull-left">
-         <%= link_to 'Flip List', properties_path %>  |
+        <div class="col-md-2"></div>
+        <div class="col-md-2">  
+          <%= link_to 'Flip List', properties_path %>  |
           <%= link_to 'Edit', edit_property_path(@property) %>
-        </div>
+        </div>  
+        <div class="col-md-9"></div>  
       </div>
   <br>
 <% else %>

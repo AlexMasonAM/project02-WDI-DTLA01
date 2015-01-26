@@ -20,14 +20,14 @@
         {{ salePrice - listPrice - fixCosts }}
         <span id="nColor-value"></span>  
       </label>
-      <input type="number" min="-1000000" max="1000000" step="1" value="{{ salePrice - listPrice - fixCosts }}" id="nColor" >
+      <input type="number" min="-1000000" max="1000000" step="1000" value="{{ salePrice - listPrice - fixCosts }}" id="nColor" >
       <h3>percent profit:</h3>
       <label for="nRatio">
         {{ (salePrice - listPrice - fixCosts) / fixCosts * 100 }}
         <%= @property.profit_percent%>%
       <span id="nRatio-value"></span>  
       </label>
-      <input type="number" min="-10" max="10" step=".10" value="0" id="nRatio" >
+      <input type="number" min="-10" max="10" step=".10" value="-.2" id="nRatio" >
     </div>
   <% end %>
 </div>

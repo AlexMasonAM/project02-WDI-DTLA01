@@ -16,12 +16,13 @@
   
   <body ng-app>
     <div class="container">
-      | angular test: {{ 6 * 7 }}{{ CalcController.simple }}
+      <!-- | angular test: {{ 6 * 7 }}{{ CalcController.simple }} -->
 
         <% if current_user %>
           <div class="pull-left">
             <%= link_to 'Flip a House', root_path %> |
             <%= link_to "Your Flips", properties_path %> |
+            <%= link_to 'Full Flips', '/full_list' %> |
             <%= link_to "Flip again", calculate_path %>
           </div> 
           <div class="pull-right">

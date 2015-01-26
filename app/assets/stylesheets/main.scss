@@ -25,7 +25,8 @@ body {
   height: 20%;
   text-align: left;
   position: relative;
-  margin-top: -40px; 
+  margin-top: -40px;
+  margin-left: 20px; 
 }
 
 .container {
@@ -43,4 +44,8 @@ body {
 margin-bottom: 10px;
 font-size: 27px;
 font-weight: 600;
+}
+
+.button-overide {
+ margin-left: -36px; 
 }
