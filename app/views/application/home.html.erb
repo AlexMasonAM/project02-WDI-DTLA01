@@ -3,15 +3,18 @@
     <div class="jumbotron" class="center-text">
       <div "jumbo-inline">
         <%= image_tag 'house-icon-06-lg.png', size: '300x300'%><br>
-        <h1><%= link_to 'FlipHouse/', calculate_path %></h1><br>
-        <h3>put your thing down Flip it and reverse it...</h3>
+        <h1><%= link_to 'FlipHouse/', calculate_path %></h1>
+        <div class="intro-spacing">
+          <p>a calculator that shows </p><p>the value of your House </p>
+        </div>
       </div>
-      <!-- <h1><span><%= link_to 'FlopHouse', calculate_path %></span></h1>  -->
-    </div>
-      <h3>a calculator that shows the value of your House </h3> 
-      <%= link_to Property.all.sample, '/full_list'%><br>
-      <%= link_to "make money!", calculate_path, class: "btn btn-success" %>
-    </div>
+        <!-- <h1><span><%= link_to 'FlopHouse', calculate_path %></span></h1>  -->
+      <div>
+        <h4>put your thing down Flip it and reverse it...</h4> 
+        <%= link_to Property.all.sample, '/full_list', class: "btn"%><br>
+        <%= link_to "make money!", calculate_path, class: "btn btn-success" %>
+      </div>
+    </div>  
   </div>
 </div>
 

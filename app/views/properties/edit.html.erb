@@ -1,14 +1,19 @@
-
-  <h1>Editing Property</h1>
-    <div class="col-lg-4">
-      <div class="property-card">
-        <div class="text-center">
-          <h3>Edit Property</h3>
+<div class="container">
+  <div class="row">
+    <h1>Editing Property</h1>
+      <div class="col-lg-4"></div>
+      <div class="col-lg-4">
+        <div class="property-card">
+          <div class="text-center">
+            <h3>Edit Property</h3>
+          </div>
+            <%= render 'partials/edit_form' %>
+            <%= link_to 'Destroy', @property, method: :delete, data: { confirm: 'Are you sure?' } %> 
         </div>
-          <%= render 'partials/edit_form' %>
-           <%= link_to 'Destroy', @property, method: :delete, data: { confirm: 'Are you sure?' } %> 
       </div>
-    </div>
+      <div class="col-lg-4"></div>
+  </div>
+</div>
     
     <%= link_to 'Destroy', @property, method: :delete, data: { confirm: 'Are you sure?' } %> |
     <%= link_to 'Show', @property %> |
