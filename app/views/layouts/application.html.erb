@@ -16,7 +16,7 @@
   
   <body ng-app>
     <div class="container">
-    | angular test: {{ 6 * 7 }}{{ CalcController.simple }}
+      | angular test: {{ 6 * 7 }}{{ CalcController.simple }}
 
         <% if current_user %>
           <div class="pull-left">
@@ -37,9 +37,15 @@
               <%= link_to 'Login', login_path %> | <%= link_to 'Sign up', signup_path %> 
           </div>
         <% end %>
-
+    </div>
+    
             <!-- div container wraps all text -->
     <%= yield %>
-    
+  <div class="container">
+    <footer>
+      <%= render 'partials/my_footer' %>
+    </footer>  
+  </div>
   </body>
+ 
 </html>

@@ -15,6 +15,7 @@ class Property
   # relationals
   belongs_to :user
 
+  # attr_accessor :sale_price, :list_price, :fix_costs, :profit_margin, :profit_percent 
 
   validates :list_price, :sale_price, presence: true
   

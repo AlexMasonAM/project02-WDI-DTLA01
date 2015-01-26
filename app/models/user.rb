@@ -10,7 +10,7 @@ class User
   field :password_digest, type: String
 
   #relational
-  has_many :property
+  has_many :properties
 
 
   validates :username, uniqueness: { case_sensitive: false } # ensure usernames are unique

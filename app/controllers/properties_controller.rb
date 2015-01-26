@@ -15,7 +15,7 @@ class PropertiesController < ApplicationController
   # GET /properties/1
   # GET /properties/1.json
   def show
-    # before_action :authorize
+    #before_action :authorize
   end
 
   # GET /properties/new
@@ -71,8 +71,8 @@ class PropertiesController < ApplicationController
 
     if @property.update(property_params)
       redirect_to properties_path
-    else
-      render :edit
+    # else
+    #   render :edit
     end
   end
 

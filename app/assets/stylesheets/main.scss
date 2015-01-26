@@ -14,3 +14,20 @@ body {
   float: left;
   margin-right: 25px;
 }
+
+.footnote {
+  right: -2em;
+  bottom: 0em;
+  display: inline-block;
+  text-decoration: none;
+  padding: 0px;
+  /*width: 25%;*/
+  height: 20%;
+  text-align: left;
+  position: relative;
+  margin-top: 10px; 
+}
+
+.container {
+  margin-top: 5px;
+}
