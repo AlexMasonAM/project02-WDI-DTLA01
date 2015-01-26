@@ -14,14 +14,14 @@
     <% end %>
 
     <div class="result-text">
-      <h3>profit:</h3>
+      <h3>$ profit:</h3>
       <label for="nColor">
         $<%= @property.profit_margin %>
         {{ salePrice - listPrice - fixCosts }}
         <span id="nColor-value"></span>  
       </label>
       <input type="number" min="-1000000" max="1000000" step="1000" value="{{ salePrice - listPrice - fixCosts }}" id="nColor" >
-      <h3>percent profit:</h3>
+      <h3>% profit:</h3>
       <label for="nRatio">
         {{ (salePrice - listPrice - fixCosts) / fixCosts * 100 }}
         <%= @property.profit_percent%>%
