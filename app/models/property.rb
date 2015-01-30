@@ -30,20 +30,6 @@ class Property
   def calculate_profit_percent
      (self.fix_costs * 100).to_i / (self.sale_price - self.fix_costs-self.list_price)
   end
-  #NOT SURE WHAT THIS CODE IS DOING 
-  # def calculate_profit_margin
-  #   profit_margin = self.profit_margin
-  #   self.profit_margin = (self.sale_price - self.list_price).to_i
-  #   return profit_margin
-  # end
 
-  # attr_accessor :sale_price, :list_price, :fix_costs 
-
-  # before_save :calculate_profit_margin
- 
-
-  # def calculate_profit_margin
-  #   self.profit_margin = self.sale_price - self.list_price
-  # end
   
 end
