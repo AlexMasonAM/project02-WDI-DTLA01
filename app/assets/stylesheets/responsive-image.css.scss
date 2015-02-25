@@ -1,0 +1,28 @@
+$tablet: new-breakpoint(max-width 480px);
+
+$mobile: new-breakpoint(max-width 320px);
+
+
+ul {
+  @include outer-container;
+  padding: 0;
+  li {
+    @include span-columns(3);
+    @include omega(4n);
+
+    @include media($tablet) {
+      @include span-columns(6);
+      @include omega(2n);
+    }
+
+    @include media($mobile) {
+      @include span-columns(12);
+      @include omega(1n);
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
